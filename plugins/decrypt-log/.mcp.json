@@ -1,0 +1,6 @@
+{
+  "decrypt-log": {
+    "command": "npx",
+    "args": ["-y", "@camscanner/mcp-decrypt-log@latest"]
+  }
+}

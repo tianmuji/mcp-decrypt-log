@@ -1,0 +1,14 @@
+{
+  "name": "camscanner-decrypt-log",
+  "owner": {
+    "name": "CamScanner"
+  },
+  "plugins": [
+    {
+      "name": "decrypt-log",
+      "description": "CamScanner encrypted log decryption plugin. Decrypt iOS/Android encrypted logs via operate platform.",
+      "source": "./plugins/decrypt-log",
+      "category": "development"
+    }
+  ]
+}
