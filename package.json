@@ -1,5 +1,5 @@
 {
-  "name": "@camscanner/mcp-decrypt-log",
+  "name": "@camscanner/CSWeb-decryptlog-mcp",
   "version": "1.0.0",
   "description": "MCP Server for decrypting CamScanner encrypted logs",
   "main": "dist/index.js",
