@@ -1,6 +1,6 @@
 {
   "decrypt-log": {
     "command": "npx",
-    "args": ["-y", "@camscanner/mcp-decrypt-log@latest"]
+    "args": ["-y", "--registry", "https://npm.intsig.net/", "@camscanner/mcp-decrypt-log@latest"]
   }
 }
