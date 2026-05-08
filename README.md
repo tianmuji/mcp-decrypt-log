@@ -14,10 +14,10 @@
 
 ```bash
 # 1. 添加插件市场（仅首次）
-claude plugin marketplace add tianmuji/camscanner-plugins
+claude plugins marketplace add https://gitlab.intsig.net/cs-templates/skills/cs-web-agent-plugins.git
 
 # 2. 安装插件
-claude plugin install decrypt-log@camscanner-plugins
+claude plugins install decrypt-log@cs-web-agent-plugins
 ```
 
 安装后重启 Claude Code 即可使用。插件会自动注册 MCP Server。
@@ -51,19 +51,8 @@ claude plugin install decrypt-log@camscanner-plugins
 
 ### 发布新版本
 
-```bash
-# 1. 修改代码并构建
-npm run build
-
-# 2. 更新版本号并发布到 npm
-npm version patch   # bug fix: 1.0.0 → 1.0.1
-npm version minor   # 新功能: 1.0.0 → 1.1.0
-npm version major   # 破坏性变更: 1.0.0 → 2.0.0
-
-npm publish --registry https://registry.npmjs.org/ --access public
-
-# 3. 推送 tag 到远端
-git push && git push --tags
-```
+1. 修改代码并推送到 GitLab
+2. 在 Jenkins 中触发构建：[public_npm](https://jenkins.intsig.net/job/public_npm/)，参考已有 mcp 相关包配置
+3. 更新 marketplace.json 中的 sha
 
 用户下次启动 Claude Code 时，`npx -y @camscanner/mcp-decrypt-log@latest` 会自动拉取新版本。
