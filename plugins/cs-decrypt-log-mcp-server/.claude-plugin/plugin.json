@@ -1,5 +1,5 @@
 {
-  "name": "decrypt-log",
+  "name": "cs-decrypt-log-mcp-server",
   "description": "CamScanner encrypted log decryption plugin. Decrypt iOS/Android encrypted logs via operate platform.",
   "version": "1.0.0",
   "author": {
