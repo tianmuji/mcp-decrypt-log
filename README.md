@@ -17,13 +17,15 @@
 claude plugins marketplace add https://gitlab.intsig.net/cs-templates/skills/cs-web-agent-plugins.git
 
 # 2. 安装插件
-claude plugins install decrypt-log@cs-web-agent-plugins
+claude plugins install cs-decrypt-log-mcp-server@cs-web-agent-plugins
 ```
 
 安装后重启 Claude Code 即可使用。插件会自动注册 MCP Server。
 
 ### 前提条件
 
+- Claude Code >= 1.0
+- Git >= 2.22（需支持 partial clone）
 - Node.js >= 18
 
 ## 认证
